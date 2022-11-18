@@ -1,0 +1,148 @@
+* {
+	box-sizing: border-box;
+	font-family: sans-serif;
+	text-align: justify;
+	margin: 0;
+}
+
+body {
+	background-color: rgb(150, 139, 139);
+}
+
+a {
+	color: black;
+}
+
+img:not(.fix)	{
+	display: inline-block;
+	margin: 0.3em;
+	padding: 10px;
+	background-size: cover;
+	background-color: gray;
+	max-width: 150px;
+	width: 100%;
+	box-shadow: 5px 10px 7px rgba(0, 0, 0, 0.3);
+}
+
+.fix {
+	width: 100%;
+	text-align: center;
+	box-shadow: 5px 10px 7px rgba(0, 0, 0, 0.3);
+	border: 1px solid black;
+}
+
+img:hover {
+	transform: translate3d(0px, 10px, 0px);
+}
+
+iframe {
+	width: 90%;
+	height: 50vw;
+	border: none;
+}
+
+p {
+	padding: 5px;
+	text-align: justify;
+}
+
+h1, h2 {
+	padding: 5px;
+	text-align: center;
+}
+
+h3 {
+  overflow: hidden;
+  text-align: center;
+}
+
+h3:before, h3:after {
+	margin: 2rem 0;
+	background-color: #000;
+	content: "";
+	display: inline-block;
+	height: 1px;
+	position: relative;
+	vertical-align: middle;
+	width: 50%;
+}
+
+h3:before {
+	right: 0.5em;
+	margin-left: -50%;
+}
+
+h3:after {
+	left: 0.5em;
+	margin-right: -50%;
+}
+
+span {
+	color: dimgray;
+	font-family: monospace;
+	font-size: x-large;
+}
+
+.right {
+	color: dimgray;
+	font-family: monospace;
+	font-weight: 100;
+	float: right;
+}
+
+.navbar {
+    overflow: hidden;
+    border-bottom: 2px solid black;
+    background: linear-gradient(10deg, rgb(89, 1, 106), rgb(184, 76, 214), rgb(214, 125, 232));
+}
+
+.navbar a {
+	text-decoration: none;
+	text-align: center;
+	display: inline-block;
+	padding: 14px 20px;
+	font-size: 17px;
+	font-weight: bold;
+}
+
+.navbar a:hover {
+	color: white;
+}
+
+.navbar a.active {
+	color: rgb(0, 255, 0);
+	cursor: default;
+	text-shadow: 3px 4px 2px rgba(0, 0, 0, 0.5);
+}
+
+.navbar .icon {
+	display: none;
+	font-size: 17px;
+}
+
+.container-content {
+	padding: 1rem;
+	text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar a:not(:first-child) {display: none;}
+  .navbar a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+	.navbar.responsive {position: relative;}
+	.navbar.responsive .icon {
+		position: absolute;
+		right: 0;
+		top: 0;
+  }
+  .navbar.responsive a {
+  	float: none;
+  	display: block;
+    text-align: left;
+  }
+}
