@@ -25,6 +25,7 @@ img:not(.fix)	{
 }
 
 .fix {
+	max-width: 400px;
 	width: 100%;
 	text-align: center;
 	box-shadow: 5px 10px 7px rgba(0, 0, 0, 0.3);
